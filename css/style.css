@@ -133,6 +133,7 @@ body {
     border: 2px solid var(--primary-color);
     color: var(--dark-color);
     }
+    
    
 /* nave css star  here  */
     .navbar {
@@ -565,7 +566,27 @@ section#portfolio {
   padding:30px;
   position: relative;
 }
-
+.model_btn {
+      transition: 0.3s all ease;
+  background-color: var(--primary-color);
+  width: 100%;
+  max-width: fit-content;
+  display: flex;
+  padding: 12px 20px;
+  justify-content: center;
+  align-self: center;
+  color: #fff;
+  border-radius: 10px;
+  margin-bottom: 30px;
+    }
+    .model_btn:hover{
+    background-color:  var(--hover-color);
+    border: 2px solid var(--primary-color);
+    color: var(--dark-color);
+    }
+p#modalDesc {
+    text-align: center;
+}
 .close-btn {
   float: right;
   font-size: 20px;
@@ -624,9 +645,14 @@ section#portfolio {
   background: transparent;
   transform: translateX(-50%);
 }
-
+.modal .img_box {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 500px;
+}
 .img_box img, .preview img {
   max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -677,7 +703,13 @@ section#contact {
 /* contact css end here  */
 /* footer css start here  */
 .footer {
-  background: linear-gradient(to right, #b177b1, #cda6e0); /* sunset vibe */
+  background-image: url('../images/bgfooter2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+
+  /* background: linear-gradient(to right, #b177b1, #cda6e0);  */
   color: var(--text-color);
   text-align: center;
   padding: 40px 20px;
