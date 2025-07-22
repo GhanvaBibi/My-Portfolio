@@ -26,7 +26,10 @@ const headingFullPreview = document.getElementById('headingFullPreview');
 const headingResponsive = document.getElementById('headingResponsive');
 const headingPalette = document.getElementById('headingPalette');
 
-// Add event listeners to buttons
+const visitBtn = document.getElementById('visitSiteBtn');
+const closeBtn = document.querySelector('.close-btn');
+
+// Open modal with project data
 viewButtons.forEach(button => {
   button.addEventListener('click', () => {
     modalTitle.textContent = button.dataset.title;
@@ -42,14 +45,36 @@ viewButtons.forEach(button => {
     headingResponsive.textContent = button.dataset.heading3;
     headingPalette.textContent = button.dataset.heading4;
 
+    // Set "Visit Site" link
+    if (visitBtn) {
+      visitBtn.href = button.dataset.link || "#";
+      visitBtn.style.display = button.dataset.link ? "inline-block" : "none";
+    }
+
     modal.style.display = 'block';
   });
 });
 
-
-document.querySelector('.close-btn').addEventListener('click', () => {
+// Close modal on close (×) button
+closeBtn.addEventListener('click', () => {
   modal.style.display = 'none';
 });
+
+// Close modal when clicking outside modal content
+modal.addEventListener('click', (e) => {
+  const modalContent = document.querySelector('.modal-content');
+  if (!modalContent.contains(e.target)) {
+    modal.style.display = 'none';
+  }
+});
+
+// Close modal on ESC key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    modal.style.display = 'none';
+  }
+});
+
 // on click view project  js start 
 // filter btn js start
 
