@@ -402,7 +402,7 @@ section.about_us {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+  background: rgba(0, 0, 0, 1.5); /* dark overlay */
   z-index: 0;
 }
 
@@ -411,12 +411,12 @@ section.about_us {
   z-index: 1;
 }
 
-.section--title h2 {
+/* .section--title h2 {
   color: #fff;
   text-align: center;
   margin-bottom: 50px;
   font-size: 3rem;
-}
+} */
 
 /* moving effect on scroll */
 .service--item {
