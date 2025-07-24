@@ -402,7 +402,7 @@ section.about_us {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 1.5); /* dark overlay */
+  background: rgba(0, 0, 0, 0.6); /* dark overlay */
   z-index: 0;
 }
 
