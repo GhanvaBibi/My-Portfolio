@@ -584,7 +584,7 @@
 
 <!-- Custom JS -->
 <script src="./js/slick.min.js"></script>
-<script src="./js/custom.js"></script>
+<script src="./js/Custom.js"></script>
 
 <!-- Modal Popup Logic -->
 <script>
@@ -606,48 +606,6 @@
   const closeBtn = document.querySelector('.close-btn');
   const viewButtons = document.querySelectorAll('.view-btn');
 
-  // Open modal with project data
-  viewButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      modalTitle.textContent = button.dataset.title;
-      modalDesc.textContent = button.dataset.desc;
-
-      imgUiKit.src = button.dataset.img1;
-      imgFullPreview.src = button.dataset.img2;
-      imgResponsive.src = button.dataset.img3;
-      imgColorPalette.src = button.dataset.img4;
-
-      headingUiKit.textContent = button.dataset.heading1;
-      headingFullPreview.textContent = button.dataset.heading2;
-      headingResponsive.textContent = button.dataset.heading3;
-      headingPalette.textContent = button.dataset.heading4;
-
-      visitBtn.href = button.dataset.link || "#";
-      visitBtn.style.display = button.dataset.link ? "inline-block" : "none";
-
-      modal.style.display = 'block';
-    });
-  });
-
-  // Close modal
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
-
-  // Close modal when clicking outside content
-  modal.addEventListener('click', (e) => {
-    const modalContent = document.querySelector('.modal-content');
-    if (!modalContent.contains(e.target)) {
-      modal.style.display = 'none';
-    }
-  });
-
-  // Close modal on ESC key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      modal.style.display = 'none';
-    }
-  });
 </script>
 
 </body>
