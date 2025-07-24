@@ -411,12 +411,11 @@ section.about_us {
   z-index: 1;
 }
 
-/* .section--title h2 {
+.section--title h2 {
   color: #fff;
   text-align: center;
   margin-bottom: 50px;
-  font-size: 3rem;
-} */
+}
 
 /* moving effect on scroll */
 .service--item {
