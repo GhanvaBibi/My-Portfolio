@@ -791,7 +791,7 @@ footer .copyright {
 }
 @media screen and (max-width:767px) {
   .cvit-section-service {
-    position: unset; /* or remove this line entirely */
+    background-attachment: unset; /* or remove this line entirely */
   }
     .nav-links {
     display: none;
